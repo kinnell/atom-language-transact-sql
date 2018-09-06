@@ -1,6 +1,6 @@
 {
   "name": "language-transact-sql",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Transact-SQL (SQL Server 2016) package for Atom",
   "keywords": [
     "language",
