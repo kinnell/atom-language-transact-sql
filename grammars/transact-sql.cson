@@ -8,4 +8,8 @@ patterns: [
     match: '@[a-z_]\\w+'
     name: 'variable'
   }
+  {
+    match: '--.*'
+    name: 'comment'
+  }
 ]
