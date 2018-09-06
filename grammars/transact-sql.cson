@@ -12,4 +12,9 @@ patterns: [
     match: '--.*'
     name: 'comment'
   }
+  {
+    begin: '\''
+    end: '\''
+    name: 'string'
+  }
 ]
