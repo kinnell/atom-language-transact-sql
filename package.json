@@ -4,7 +4,11 @@
   "description": "Transact-SQL (SQL Server 2016) package for Atom",
   "keywords": [
     "language",
-    "grammar"
+    "grammar",
+    "tsql",
+    "sql",
+    "transact-sql",
+    "sqlserver"
   ],
   "repository": "https://github.com/kinnell/atom-language-transact-sql",
   "license": "MIT",
