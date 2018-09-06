@@ -17,4 +17,8 @@ patterns: [
     end: '\''
     name: 'string'
   }
+  {
+    match: '\\b\\d+\\b'
+    name: 'numeric'
+  }
 ]
