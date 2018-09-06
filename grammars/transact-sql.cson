@@ -21,4 +21,8 @@ patterns: [
     match: '\\b[0-9]+(\\.[0-9]+)?\\b'
     name: 'numeric'
   }
+  {
+    match: '\\b(null|not null)\\b'
+    name: 'null'
+  }
 ]
