@@ -6,7 +6,7 @@ describe "SQL grammar", ->
       atom.packages.activatePackage("language-transact-sql")
 
     runs ->
-      grammar = atom.syntax.grammarForScopeName("source.sql")
+      grammar = atom.grammars.grammarForScopeName("source.sql")
 
   it "parses the grammar", ->
     expect(grammar).toBeTruthy()
