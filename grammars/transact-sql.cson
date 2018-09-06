@@ -1,4 +1,4 @@
-scopeName: 'source.transact-sql'
+scopeName: 'source.sql'
 name: 'SQL (Transact-SQL)'
 fileTypes: [
   'sql'
