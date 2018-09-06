@@ -1,0 +1,14 @@
+{
+  "name": "language-transact-sql",
+  "version": "0.0.1",
+  "description": "Transact-SQL (SQL Server 2016) package for Atom",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/kinnell/atom-language-transact-sql",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+'.source.transact-sql':
+  'editor':
+    'commentStart': '-- '

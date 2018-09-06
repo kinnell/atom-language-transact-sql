@@ -1,0 +1,7 @@
+scopeName: 'source.transact-sql'
+name: 'TransactSQL'
+fileTypes: [
+  'sql'
+]
+patterns: [
+]
