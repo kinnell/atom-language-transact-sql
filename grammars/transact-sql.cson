@@ -1,5 +1,5 @@
 scopeName: 'source.transact-sql'
-name: 'TransactSQL'
+name: 'SQL (Transact-SQL)'
 fileTypes: [
   'sql'
 ]
