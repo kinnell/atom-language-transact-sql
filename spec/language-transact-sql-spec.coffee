@@ -36,6 +36,6 @@ describe 'SQL grammar', ->
     {tokens} = grammar.tokenizeLine('null')
     expect(tokens[0]).toEqual value: 'null', scopes: ['source.sql', 'null']
 
-  it 'tokenizes 'not null'', ->
+  it 'tokenizes \'not null\'', ->
     {tokens} = grammar.tokenizeLine('not null')
     expect(tokens[0]).toEqual value: 'not null', scopes: ['source.sql', 'null']
