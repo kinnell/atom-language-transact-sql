@@ -1,7 +1,5 @@
 language: objective-c
-
-os:
-  - osx
+os: osx
 
 notifications:
   email:
