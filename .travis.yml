@@ -6,8 +6,5 @@ notifications:
     on_success: never
     on_failure: change
 
-before_install:
-  - echo $TRAVIS_OS_NAME
-
 script:
   - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
