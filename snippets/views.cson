@@ -1,0 +1,19 @@
+'.source.sql':
+  'Create View':
+    prefix: 'create view'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- VIEW: ${1:v_VIEW_NAME}
+      -------------------------------------------------------------------------------
+
+      create or alter view ${1:v_VIEW_NAME}
+      as
+
+          $2
+
+      go
+
+
+      grant select, insert, update, delete on ${1:v_VIEW_NAME} to public
+      go
+      '''

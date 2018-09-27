@@ -1,0 +1,21 @@
+'.source.sql':
+  'Create Table':
+    prefix: 'create table'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- TABLE: ${1:TABLE_NAME}
+      -------------------------------------------------------------------------------
+
+      drop table if exists ${1:TABLE_NAME}
+      go
+
+
+      create table ${1:TABLE_NAME}(
+          $2
+      )
+      go
+
+
+      grant select, insert, update, delete on ${1:TABLE_NAME} to public
+      go
+      '''

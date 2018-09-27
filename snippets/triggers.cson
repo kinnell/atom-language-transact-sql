@@ -1,0 +1,58 @@
+'.source.sql':
+  'Create DML Trigger (INSERT)':
+    prefix: 'create trigger insert'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- TRIGGER: ${1:TABLE_NAME}_INSERT
+      -------------------------------------------------------------------------------
+
+      create or alter ${1:TABLE_NAME}_INSERT on ${1:TABLE_NAME} after insert
+      as
+      begin
+
+          -- New table records:
+          select * from inserted i
+
+          $2
+
+      end
+      go
+      '''
+  'Create DML Trigger (UPDATE)':
+    prefix: 'create trigger update'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- TRIGGER: ${1:TABLE_NAME}_UPDATE
+      -------------------------------------------------------------------------------
+
+      create or alter ${1:TABLE_NAME}_UPDATE on ${1:TABLE_NAME} after update
+      as
+      begin
+
+          -- Updated table records:
+          select * from inserted i inner join deleted d on d.$identity = i.$identity
+
+          $2
+
+      end
+      go
+      '''
+  'Create DML Trigger (DELETE)':
+    prefix: 'create trigger delete'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- TRIGGER: ${1:TABLE_NAME}_DELETE
+      -------------------------------------------------------------------------------
+
+      create or alter ${1:TABLE_NAME}_DELETE on ${1:TABLE_NAME} after delete
+      as
+      begin
+
+          -- Deleted table records:
+          select * from deleted d
+
+          $2
+
+      end
+      go
+      '''

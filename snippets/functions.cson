@@ -1,0 +1,53 @@
+'.source.sql':
+  'Create Scalar-Valued User-Defined Function (UDF)':
+    prefix: 'create udf'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- UDF: dbo.${1:UDF_NAME}
+      -------------------------------------------------------------------------------
+
+      create or alter function dbo.${1:UDF_NAME}(
+          $2
+      )
+      returns ${3:RETURN_VALUE_DATATYPE}
+      as
+      begin
+
+          declare @value ${3:RETURN_VALUE_DATATYPE}
+
+          $4
+
+          return @value
+
+      end
+      go
+
+
+      grant execute on dbo.${1:UDF_NAME} to public
+      '''
+  'Create Table-Valued User-Defined Function (UDF)':
+    prefix: 'create tudf'
+    body: '''
+      -------------------------------------------------------------------------------
+      -- UDF: ${1:t_TABLE_UDF_NAME}
+      -------------------------------------------------------------------------------
+
+      create or alter function ${1:t_TABLE_UDF_NAME}(
+          $2
+      )
+      returns @t table (
+          $3
+      )
+      as
+      begin
+
+          $4
+
+          return @t
+
+      end
+      go
+
+
+      grant select, insert, update, delete on ${1:t_TABLE_UDF_NAME} to public
+      '''
