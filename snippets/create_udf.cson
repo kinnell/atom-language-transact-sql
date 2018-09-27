@@ -1,0 +1,24 @@
+'.source.sql':
+  'Create User-Defined Function (UDF)':
+    'prefix': 'create udf'
+    'body': '''
+      -------------------------------------------------------------------------------
+      -- UDF: dbo.${1:UDF_NAME}
+      -------------------------------------------------------------------------------
+
+      create or alter function dbo.${1:UDF_NAME}(
+          $2
+      )
+      returns ${3:RETURN_VALUE_DATATYPE}
+      as
+      begin
+
+          declare @value ${3:RETURN_VALUE_DATATYPE}
+
+          $4
+
+          return @value
+
+      end
+      go
+      '''
