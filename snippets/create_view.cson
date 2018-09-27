@@ -9,9 +9,11 @@
       create or alter view ${1:v_VIEW_NAME}
       as
 
-        $2
+          $2
 
       go
 
-      grant select on ${1:v_VIEW_NAME} to public
+
+      grant select, insert, update, delete on ${1:v_VIEW_NAME} to public
+      go
       '''
