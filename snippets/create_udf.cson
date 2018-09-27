@@ -21,4 +21,29 @@
 
       end
       go
+  'Create Table-Valued User-Defined Function (UDF)':
+    'prefix': 'create tudf'
+    'body': '''
+      -------------------------------------------------------------------------------
+      -- UDF: ${1:t_TABLE_UDF_NAME}
+      -------------------------------------------------------------------------------
+
+      create or alter function ${1:t_TABLE_UDF_NAME}(
+          $2
+      )
+      returns @t table (
+          $3
+      )
+      as
+      begin
+
+          $4
+
+          return @t
+
+      end
+      go
+
+
+      grant select, insert, update, delete on ${1:t_TABLE_UDF_NAME} to public
       '''
