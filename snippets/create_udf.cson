@@ -1,7 +1,7 @@
 '.source.sql':
   'Create Scalar-Valued User-Defined Function (UDF)':
-    'prefix': 'create udf'
-    'body': '''
+    prefix: 'create udf'
+    body: '''
       -------------------------------------------------------------------------------
       -- UDF: dbo.${1:UDF_NAME}
       -------------------------------------------------------------------------------
@@ -26,8 +26,8 @@
       grant execute on dbo.${1:UDF_NAME} to public
       '''
   'Create Table-Valued User-Defined Function (UDF)':
-    'prefix': 'create tudf'
-    'body': '''
+    prefix: 'create tudf'
+    body: '''
       -------------------------------------------------------------------------------
       -- UDF: ${1:t_TABLE_UDF_NAME}
       -------------------------------------------------------------------------------

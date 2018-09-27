@@ -1,7 +1,7 @@
 '.source.sql':
   'Create Stored Procedure':
-    'prefix': 'create proc'
-    'body': '''
+    prefix: 'create proc'
+    body: '''
       -------------------------------------------------------------------------------
       -- PROCEDURE: ${1:PROCEDURE_NAME}
       -------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 '.source.sql':
   'Create DML Trigger (INSERT)':
-    'prefix': 'create trigger insert'
-    'body': '''
+    prefix: 'create trigger insert'
+    body: '''
       -------------------------------------------------------------------------------
       -- TRIGGER: ${1:TABLE_NAME}_INSERT
       -------------------------------------------------------------------------------
@@ -19,8 +19,8 @@
       go
       '''
   'Create DML Trigger (UPDATE)':
-    'prefix': 'create trigger update'
-    'body': '''
+    prefix: 'create trigger update'
+    body: '''
       -------------------------------------------------------------------------------
       -- TRIGGER: ${1:TABLE_NAME}_UPDATE
       -------------------------------------------------------------------------------
@@ -38,8 +38,8 @@
       go
       '''
   'Create DML Trigger (DELETE)':
-    'prefix': 'create trigger delete'
-    'body': '''
+    prefix: 'create trigger delete'
+    body: '''
       -------------------------------------------------------------------------------
       -- TRIGGER: ${1:TABLE_NAME}_DELETE
       -------------------------------------------------------------------------------
