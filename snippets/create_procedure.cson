@@ -1,0 +1,22 @@
+'.source.sql':
+  'Create Stored Procedure':
+    'prefix': 'create proc'
+    'body': '''
+      -------------------------------------------------------------------------------
+      -- PROCEDURE: ${1:PROCEDURE_NAME}
+      -------------------------------------------------------------------------------
+
+      create or alter procedure ${1:PROCEDURE_NAME}(
+          $2
+      )
+      as
+      begin
+
+          $3
+
+      end
+      go
+
+
+      grant execute on ${1:PROCEDURE_NAME} to public
+      '''
