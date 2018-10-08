@@ -40,6 +40,18 @@ describe 'SQL grammar', ->
     {tokens} = grammar.tokenizeLine('not null')
     expect(tokens[0]).toEqual value: 'not null', scopes: ['source.sql', 'null']
 
-  it 'tokenizes datatypes', ->
+  it 'tokenizes Data Types', ->
     {tokens} = grammar.tokenizeLine('declare @variable int')
     expect(tokens[3]).toEqual value: 'int', scopes: ['source.sql', 'data-type']
+
+  it 'tokenizes Data Definition Language (DDL) keywords', ->
+    {tokens} = grammar.tokenizeLine('create')
+    expect(tokens[0]).toEqual value: 'create', scopes: ['source.sql', 'ddl']
+
+  it 'tokenizes Data Manipulation Language (DML) keywords', ->
+    {tokens} = grammar.tokenizeLine('select')
+    expect(tokens[0]).toEqual value: 'select', scopes: ['source.sql', 'dml']
+
+  it 'tokenizes Data Manipulation Language (DML) Clause keywords', ->
+    {tokens} = grammar.tokenizeLine('from')
+    expect(tokens[0]).toEqual value: 'from', scopes: ['source.sql', 'dml-clause']

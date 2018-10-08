@@ -41,4 +41,16 @@ patterns: [
     match: '\\b(uniqueidentifier|sysname)\\b'
     name: 'data-type'
   }
+  {
+    match: '\\b(create|alter|drop|disable trigger|enable trigger|rename|update statistics)\\b'
+    name: 'ddl'
+  }
+  {
+    match: '\\b(select|insert|update|delete|merge|bulk insert|truncate table)\\b'
+    name: 'dml'
+  }
+  {
+    match: '\\b(from|option|output|top|where|with|order by|group by|having)\\b'
+    name: 'dml-clause'
+  }
 ]
