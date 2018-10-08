@@ -39,3 +39,7 @@ describe 'SQL grammar', ->
   it 'tokenizes \'not null\'', ->
     {tokens} = grammar.tokenizeLine('not null')
     expect(tokens[0]).toEqual value: 'not null', scopes: ['source.sql', 'null']
+
+  it 'tokenizes datatypes', ->
+    {tokens} = grammar.tokenizeLine('declare @variable int')
+    expect(tokens[3]).toEqual value: 'int', scopes: ['source.sql', 'data-type']

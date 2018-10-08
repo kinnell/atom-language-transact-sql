@@ -25,4 +25,20 @@ patterns: [
     match: '\\b(null|not null)\\b'
     name: 'null'
   }
+  {
+    match: '\\b(int|bigint|smallint|tinyint|numeric|bit|decimal|money|smallmoney|float|real)\\b'
+    name: 'data-type'
+  }
+  {
+    match: '\\b(date|time|datetime|datetime2|smalldatetime|datetimeoffset)\\b'
+    name: 'data-type'
+  }
+  {
+    match: '\\b(char|varchar|text|nchar|nvarchar|ntext|binary|varbinary|image)\\b'
+    name: 'data-type'
+  }
+  {
+    match: '\\b(uniqueidentifier|sysname)\\b'
+    name: 'data-type'
+  }
 ]
